@@ -20,8 +20,7 @@
         <!-- Modern Header with Gradient -->
         <Border Grid.Row="0"
                 Background="{StaticResource PrimaryColorBrush}"
-                Height="80"
-                materialDesign:ElevationAssist.Elevation="Dp4">
+                Height="80">
             <Grid Margin="32,0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <iconPacks:PackIconMaterial Kind="Hotel"
@@ -80,7 +79,7 @@
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0" Content="Room Number:"/>
-                            <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Room Number"
+                            <TextBox Grid.Column="1" Grid.Row="1"
                                      Text="{Binding RoomSearchTerm, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Label Grid.Column="2" Content="Room Type:"/>
@@ -174,7 +173,7 @@
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0" Content="Search by Name, Email, or Phone:"/>
-                            <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Name, Email, or Phone"
+                            <TextBox Grid.Column="1" Grid.Row="1"
                                      Text="{Binding CustomerSearchTerm, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Button Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
@@ -262,11 +261,11 @@
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0" Content="Customer Name:"/>
-                            <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Customer Name"
+                            <TextBox Grid.Column="1" Grid.Row="1"
                                      Text="{Binding BookingCustomerSearch, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Label Grid.Column="2" Content="Room Number:"/>
-                            <TextBox Grid.Column="3" Grid.Row="1" materialDesign:HintAssist.Hint="Room Number"
+                            <TextBox Grid.Column="3" Grid.Row="1"
                                      Text="{Binding BookingRoomSearch, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Label Grid.Column="4" Content="Status:"/>
@@ -372,7 +371,7 @@
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0" Content="Search by Name:"/>
-                            <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Staff Name"
+                            <TextBox Grid.Column="1" Grid.Row="1"
                                      Text="{Binding StaffSearchTerm, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Label Grid.Column="2" Content="Role:"/>
@@ -469,7 +468,7 @@
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0" Content="Table Name:"/>
-                            <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Table Name"
+                            <TextBox Grid.Column="1" Grid.Row="1"
                                      Text="{Binding AuditTableName, UpdateSourceTrigger=PropertyChanged}"/>
 
                             <Label Grid.Column="2" Content="Operation:"/>

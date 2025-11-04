@@ -1,7 +1,6 @@
 <Window x:Class="Assignment_1.RoomEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Room Details"
         Height="400"
         Width="500"
@@ -11,7 +10,7 @@
 
     <Border Padding="24" Background="{StaticResource SurfaceBrush}"
             Margin="16" CornerRadius="12"
-            materialDesign:ElevationAssist.Elevation="Dp4">
+           >
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -37,7 +36,7 @@
                            Margin="0,0,0,8"/>
                 <ComboBox x:Name="TypeCombo"
                           Style="{StaticResource ModernComboBox}"
-                          materialDesign:HintAssist.Hint="Select room type"/>
+                         />
             </StackPanel>
 
             <!-- Room Status -->
@@ -47,7 +46,7 @@
                            Margin="0,0,0,8"/>
                 <ComboBox x:Name="StatusCombo"
                           Style="{StaticResource ModernComboBox}"
-                          materialDesign:HintAssist.Hint="Select status"/>
+                         />
             </StackPanel>
 
             <!-- Price per Night -->
@@ -57,7 +56,7 @@
                            Margin="0,0,0,8"/>
                 <TextBox x:Name="PriceText"
                          Style="{StaticResource ModernTextBox}"
-                         materialDesign:HintAssist.Hint="Enter price (e.g., 100.00)"/>
+                        />
             </StackPanel>
 
             <!-- Action Buttons -->

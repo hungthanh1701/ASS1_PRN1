@@ -1,31 +1,13 @@
 ﻿<Application x:Class="Assignment_1.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
-                <!-- 1. Material Design Standard Styles (MUST BE FIRST) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
-
-                <!-- 2. Primary Color Palette: DeepPurple (Màu chính) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
-
-                <!-- 3. Accent Color Palette: LightBlue (Màu nhấn) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightBlue.xaml" />
-
-                <!-- 4. Default Theme and Color Settings (Light Theme) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-
-                <!-- 5. Custom Styles (Must be LAST to override defaults) -->
+                <!-- Custom Styles -->
                 <ResourceDictionary Source="Themes/CustomStyles.xaml"/>
-
             </ResourceDictionary.MergedDictionaries>
-
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>
