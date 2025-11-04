@@ -24,11 +24,11 @@
                 materialDesign:ElevationAssist.Elevation="Dp4">
             <Grid Margin="32,0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <iconPacks:PackIconMaterialDesign Kind="Hotel"
-                                                       Width="40" Height="40"
-                                                       Foreground="White"
-                                                       VerticalAlignment="Center"
-                                                       Margin="0,0,16,0"/>
+                    <iconPacks:PackIconMaterial Kind="Hotel"
+                                                Width="40" Height="40"
+                                                Foreground="White"
+                                                VerticalAlignment="Center"
+                                                Margin="0,0,16,0"/>
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="Hotel Management System"
                                    FontSize="28"
@@ -51,7 +51,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconMaterialDesign Kind="Hotel" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <iconPacks:PackIconMaterial Kind="Hotel" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Room Management" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -95,7 +95,7 @@
                             <Button Grid.Column="6" Grid.RowSpan="2" Style="{StaticResource InfoButton}" 
                                     Command="{Binding SearchRoomsCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterialDesign Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -120,25 +120,25 @@
                                 HorizontalAlignment="Center" Margin="10">
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding AddRoomCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="HomePlus" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="HomePlus" Margin="0,0,5,0"/>
                                 <TextBlock Text="Add Room"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding EditRoomCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="HomeEdit" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="HomeEdit" Margin="0,0,5,0"/>
                                 <TextBlock Text="Edit Room"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource DangerButton}" Command="{Binding DeleteRoomCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="HomeRemove" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="HomeRemove" Margin="0,0,5,0"/>
                                 <TextBlock Text="Delete Room"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource InfoButton}" Command="{Binding RefreshRoomsCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Refresh" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Refresh" Margin="0,0,5,0"/>
                                 <TextBlock Text="Refresh"/>
                             </StackPanel>
                         </Button>
@@ -149,7 +149,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconMaterialDesign Kind="AccountGroup" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <iconPacks:PackIconMaterial Kind="AccountGroup" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Customer Management" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -179,7 +179,7 @@
                             <Button Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
                                     Command="{Binding SearchCustomersCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterialDesign Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -204,25 +204,25 @@
                                 HorizontalAlignment="Center" Margin="10">
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding AddCustomerCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountPlus" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountPlus" Margin="0,0,5,0"/>
                                 <TextBlock Text="Add Customer"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding EditCustomerCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountEdit" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountEdit" Margin="0,0,5,0"/>
                                 <TextBlock Text="Edit Customer"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource DangerButton}" Command="{Binding DeleteCustomerCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountRemove" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountRemove" Margin="0,0,5,0"/>
                                 <TextBlock Text="Delete Customer"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource InfoButton}" Command="{Binding RefreshCustomersCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Refresh" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Refresh" Margin="0,0,5,0"/>
                                 <TextBlock Text="Refresh"/>
                             </StackPanel>
                         </Button>
@@ -233,7 +233,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconMaterialDesign Kind="CalendarClock" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <iconPacks:PackIconMaterial Kind="CalendarClock" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Booking Management" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -276,7 +276,7 @@
                             <Button Grid.Column="6" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
                                     Command="{Binding SearchBookingsCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterialDesign Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -304,37 +304,37 @@
                                 HorizontalAlignment="Center" Margin="10">
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding AddBookingCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="BookPlus" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="BookPlus" Margin="0,0,5,0"/>
                                 <TextBlock Text="New Booking"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding EditBookingCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="BookEdit" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="BookEdit" Margin="0,0,5,0"/>
                                 <TextBlock Text="Edit Booking"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource DangerButton}" Command="{Binding CancelBookingCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="BookCancel" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="BookCancel" Margin="0,0,5,0"/>
                                 <TextBlock Text="Cancel Booking"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource SuccessButton}" Command="{Binding CheckInBookingCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Login" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Login" Margin="0,0,5,0"/>
                                 <TextBlock Text="Check In"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource InfoButton}" Command="{Binding CheckOutBookingCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Logout" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Logout" Margin="0,0,5,0"/>
                                 <TextBlock Text="Check Out"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource InfoButton}" Command="{Binding RefreshBookingsCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Refresh" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Refresh" Margin="0,0,5,0"/>
                                 <TextBlock Text="Refresh"/>
                             </StackPanel>
                         </Button>
@@ -345,7 +345,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconMaterialDesign Kind="AccountTie" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <iconPacks:PackIconMaterial Kind="AccountTie" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Staff Management" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -382,7 +382,7 @@
                             <Button Grid.Column="4" Grid.RowSpan="2" Style="{StaticResource InfoButton}" 
                                     Command="{Binding SearchStaffCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterialDesign Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -409,25 +409,25 @@
                                 HorizontalAlignment="Center" Margin="10">
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding AddStaffCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountPlus" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountPlus" Margin="0,0,5,0"/>
                                 <TextBlock Text="Add Staff"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding EditStaffCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountEdit" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountEdit" Margin="0,0,5,0"/>
                                 <TextBlock Text="Edit Staff"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource DangerButton}" Command="{Binding DeactivateStaffCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="AccountRemove" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="AccountRemove" Margin="0,0,5,0"/>
                                 <TextBlock Text="Deactivate Staff"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource InfoButton}" Command="{Binding RefreshStaffCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Refresh" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Refresh" Margin="0,0,5,0"/>
                                 <TextBlock Text="Refresh"/>
                             </StackPanel>
                         </Button>
@@ -438,7 +438,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconMaterialDesign Kind="FileDocumentEdit" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <iconPacks:PackIconMaterial Kind="FileDocumentEdit" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Audit Logs" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -487,7 +487,7 @@
                             <Button Grid.Column="8" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
                                     Command="{Binding FilterAuditLogsCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterialDesign Kind="Filter" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Filter" Margin="0,0,5,0"/>
                                     <TextBlock Text="Filter"/>
                                 </StackPanel>
                             </Button>
@@ -513,13 +513,13 @@
                                 HorizontalAlignment="Center" Margin="10">
                         <Button Style="{StaticResource InfoButton}" Command="{Binding RefreshAuditLogsCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="Refresh" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="Refresh" Margin="0,0,5,0"/>
                                 <TextBlock Text="Refresh"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource PrimaryButton}" Command="{Binding ExportAuditLogsCommand}" Margin="5">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterialDesign Kind="FileExport" Margin="0,0,5,0"/>
+                                <iconPacks:PackIconMaterial Kind="FileExport" Margin="0,0,5,0"/>
                                 <TextBlock Text="Export Logs"/>
                             </StackPanel>
                         </Button>

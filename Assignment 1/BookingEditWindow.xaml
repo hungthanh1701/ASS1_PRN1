@@ -29,7 +29,7 @@
 
             <!-- Header -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,24">
-                <iconPacks:PackIconMaterialDesign Kind="Calendar"
+                <iconPacks:PackIconMaterial Kind="Calendar"
                                                    Width="32" Height="32"
                                                    Foreground="{StaticResource PrimaryColorBrush}"
                                                    VerticalAlignment="Center"
@@ -44,7 +44,7 @@
             <!-- Customer Selection -->
             <StackPanel Grid.Row="1" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="Account"
+                    <iconPacks:PackIconMaterial Kind="Account"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -61,7 +61,7 @@
             <!-- Room Selection -->
             <StackPanel Grid.Row="2" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="Hotel"
+                    <iconPacks:PackIconMaterial Kind="Hotel"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -78,7 +78,7 @@
             <!-- Check-in Date -->
             <StackPanel Grid.Row="3" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="CalendarStart"
+                    <iconPacks:PackIconMaterial Kind="CalendarStart"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -94,7 +94,7 @@
             <!-- Check-out Date -->
             <StackPanel Grid.Row="4" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="CalendarEnd"
+                    <iconPacks:PackIconMaterial Kind="CalendarEnd"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -110,7 +110,7 @@
             <!-- Total Price -->
             <StackPanel Grid.Row="5" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="CurrencyUsd"
+                    <iconPacks:PackIconMaterial Kind="CurrencyUsd"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -128,7 +128,7 @@
             <!-- Status -->
             <StackPanel Grid.Row="6" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterialDesign Kind="CheckCircle"
+                    <iconPacks:PackIconMaterial Kind="CheckCircle"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -148,7 +148,7 @@
                     Padding="12"
                     Margin="0,8,0,16">
                 <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconMaterialDesign Kind="InformationOutline"
+                    <iconPacks:PackIconMaterial Kind="InformationOutline"
                                                        Width="20" Height="20"
                                                        Foreground="{StaticResource WarningBrush}"
                                                        VerticalAlignment="Center"

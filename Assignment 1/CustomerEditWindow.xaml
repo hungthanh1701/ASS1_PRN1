@@ -27,7 +27,7 @@
 
             <!-- Header -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,24">
-                <iconPacks:PackIconMaterialDesign Kind="Account"
+                <iconPacks:PackIconMaterial Kind="Account"
                                                    Width="32" Height="32"
                                                    Foreground="{StaticResource PrimaryColorBrush}"
                                                    VerticalAlignment="Center"
@@ -91,7 +91,7 @@
                     Padding="12"
                     Margin="0,8,0,16">
                 <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconMaterialDesign Kind="InformationOutline"
+                    <iconPacks:PackIconMaterial Kind="InformationOutline"
                                                        Width="20" Height="20"
                                                        Foreground="{StaticResource PrimaryColorBrush}"
                                                        VerticalAlignment="Center"
