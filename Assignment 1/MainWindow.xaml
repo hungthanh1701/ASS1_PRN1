@@ -2,37 +2,67 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
-        
-        Title="Hotel Management System" Height="800" Width="1200"
-        WindowStartupLocation="CenterScreen">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
 
-    <Grid Margin="10">
+        Title="Hotel Management System"
+        Height="850"
+        Width="1400"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Background="{StaticResource PrimaryColorBrush}" Padding="15" CornerRadius="5,5,0,0">
-            <TextBlock Text="Hotel Management System" 
-                       FontSize="26" 
-                       FontWeight="ExtraBold" 
-                       Foreground="White"
-                       HorizontalAlignment="Left"/>
+        <!-- Modern Header with Gradient -->
+        <Border Grid.Row="0"
+                Background="{StaticResource PrimaryColorBrush}"
+                Height="80"
+                materialDesign:ElevationAssist.Elevation="Dp4">
+            <Grid Margin="32,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <iconPacks:PackIconMaterialDesign Kind="Hotel"
+                                                       Width="40" Height="40"
+                                                       Foreground="White"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,16,0"/>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Hotel Management System"
+                                   FontSize="28"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+                        <TextBlock Text="Professional Hotel Operations Platform"
+                                   FontSize="12"
+                                   Foreground="#E0E0E0"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
         </Border>
 
-        <TabControl Grid.Row="1" Margin="5,0,5,5" Style="{StaticResource MaterialDesignTabControl}">
+        <TabControl Grid.Row="1"
+                    Margin="16"
+                    Style="{StaticResource MaterialDesignTabControl}"
+                    materialDesign:ColorZoneAssist.Mode="PrimaryMid">
 
-            <TabItem Header="Room Management">
-                <Grid Margin="10">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign Kind="Hotel" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Room Management" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Margin="16" Background="{StaticResource BackgroundBrush}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Margin="5">
+                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Style="{StaticResource ModernGroupBox}">
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -72,9 +102,10 @@
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Header="Rooms" Margin="5">
-                        <DataGrid ItemsSource="{Binding Rooms}" 
-                                  SelectedItem="{Binding SelectedRoom}">
+                    <GroupBox Grid.Row="1" Header="Rooms" Style="{StaticResource ModernGroupBox}">
+                        <DataGrid ItemsSource="{Binding Rooms}"
+                                  SelectedItem="{Binding SelectedRoom}"
+                                  Style="{StaticResource ModernDataGrid}"
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Room Number" Binding="{Binding RoomNumber}" Width="100"/>
@@ -115,15 +146,21 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Customer Management">
-                <Grid Margin="10">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign Kind="AccountGroup" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Customer Management" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Margin="16" Background="{StaticResource BackgroundBrush}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <GroupBox Grid.Row="0" Header="Search" Margin="5">
+                    <GroupBox Grid.Row="0" Header="Search" Style="{StaticResource ModernGroupBox}">
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -149,9 +186,10 @@
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Header="Customers" Margin="5">
-                        <DataGrid ItemsSource="{Binding Customers}" 
-                                  SelectedItem="{Binding SelectedCustomer}">
+                    <GroupBox Grid.Row="1" Header="Customers" Style="{StaticResource ModernGroupBox}">
+                        <DataGrid ItemsSource="{Binding Customers}"
+                                  SelectedItem="{Binding SelectedCustomer}"
+                                  Style="{StaticResource ModernDataGrid}"
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Name" Binding="{Binding FullName}" Width="200"/>
@@ -192,15 +230,21 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Booking Management">
-                <Grid Margin="10">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign Kind="CalendarClock" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Booking Management" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Margin="16" Background="{StaticResource BackgroundBrush}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Margin="5">
+                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Style="{StaticResource ModernGroupBox}">
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -239,9 +283,10 @@
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Header="Bookings" Margin="5">
-                        <DataGrid ItemsSource="{Binding Bookings}" 
-                                  SelectedItem="{Binding SelectedBooking}">
+                    <GroupBox Grid.Row="1" Header="Bookings" Style="{StaticResource ModernGroupBox}">
+                        <DataGrid ItemsSource="{Binding Bookings}"
+                                  SelectedItem="{Binding SelectedBooking}"
+                                  Style="{StaticResource ModernDataGrid}"
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Customer" Binding="{Binding Customer.FullName}" Width="150"/>
@@ -297,15 +342,21 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Staff Management">
-                <Grid Margin="10">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign Kind="AccountTie" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Staff Management" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Margin="16" Background="{StaticResource BackgroundBrush}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Margin="5">
+                    <GroupBox Grid.Row="0" Header="Search &amp; Filter" Style="{StaticResource ModernGroupBox}">
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -338,9 +389,10 @@
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Header="Staff Members" Margin="5">
-                        <DataGrid ItemsSource="{Binding StaffMembers}" 
-                                  SelectedItem="{Binding SelectedStaff}">
+                    <GroupBox Grid.Row="1" Header="Staff Members" Style="{StaticResource ModernGroupBox}">
+                        <DataGrid ItemsSource="{Binding StaffMembers}"
+                                  SelectedItem="{Binding SelectedStaff}"
+                                  Style="{StaticResource ModernDataGrid}"
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200"/>
@@ -383,15 +435,21 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Audit Logs">
-                <Grid Margin="10">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign Kind="FileDocumentEdit" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Audit Logs" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Margin="16" Background="{StaticResource BackgroundBrush}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <GroupBox Grid.Row="0" Header="Filter" Margin="5">
+                    <GroupBox Grid.Row="0" Header="Filter" Style="{StaticResource ModernGroupBox}">
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -436,8 +494,9 @@
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Header="Audit Logs" Margin="5">
-                        <DataGrid ItemsSource="{Binding AuditLogs}">
+                    <GroupBox Grid.Row="1" Header="Audit Logs" Style="{StaticResource ModernGroupBox}">
+                        <DataGrid ItemsSource="{Binding AuditLogs}"
+                                  Style="{StaticResource ModernDataGrid}"
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Date" Binding="{Binding OperationDate, StringFormat=dd/MM/yyyy HH:mm}" Width="120"/>

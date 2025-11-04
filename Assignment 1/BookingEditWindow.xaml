@@ -1,45 +1,181 @@
 <Window x:Class="Assignment_1.BookingEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Booking" Height="340" Width="480" WindowStartupLocation="CenterOwner">
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Title="Booking Details"
+        Height="700"
+        Width="600"
+        WindowStartupLocation="CenterOwner"
+        Background="{StaticResource BackgroundBrush}"
+        ResizeMode="NoResize">
 
-        <TextBlock Text="Customer:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <ComboBox x:Name="CustomerCombo" Grid.Column="1" Margin="0,0,0,10" DisplayMemberPath="FullName"/>
+    <Border Padding="24" Background="{StaticResource SurfaceBrush}"
+            Margin="16" CornerRadius="12"
+            materialDesign:ElevationAssist.Elevation="Dp4">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Text="Room:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <ComboBox x:Name="RoomCombo" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" DisplayMemberPath="RoomNumber"/>
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,24">
+                <iconPacks:PackIconMaterialDesign Kind="Calendar"
+                                                   Width="32" Height="32"
+                                                   Foreground="{StaticResource PrimaryColorBrush}"
+                                                   VerticalAlignment="Center"
+                                                   Margin="0,0,12,0"/>
+                <TextBlock Text="Booking Information"
+                           Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                           Foreground="{StaticResource PrimaryColorBrush}"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="2" Text="Check-in:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <DatePicker x:Name="CheckInPicker" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Customer Selection -->
+            <StackPanel Grid.Row="1" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="Account"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Customer"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <ComboBox x:Name="CustomerCombo"
+                          Style="{StaticResource ModernComboBox}"
+                          DisplayMemberPath="FullName"
+                          materialDesign:HintAssist.Hint="Select customer"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="3" Text="Check-out:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <DatePicker x:Name="CheckOutPicker" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Room Selection -->
+            <StackPanel Grid.Row="2" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="Hotel"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Room"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <ComboBox x:Name="RoomCombo"
+                          Style="{StaticResource ModernComboBox}"
+                          DisplayMemberPath="RoomNumber"
+                          materialDesign:HintAssist.Hint="Select room"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="4" Text="Total Price:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <TextBox x:Name="TotalText" Grid.Row="4" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Check-in Date -->
+            <StackPanel Grid.Row="3" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="CalendarStart"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Check-in Date"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <DatePicker x:Name="CheckInPicker"
+                            Style="{StaticResource ModernDatePicker}"
+                            materialDesign:HintAssist.Hint="Select check-in date"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="5" Text="Status:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <ComboBox x:Name="StatusCombo" Grid.Row="5" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Check-out Date -->
+            <StackPanel Grid.Row="4" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="CalendarEnd"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Check-out Date"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <DatePicker x:Name="CheckOutPicker"
+                            Style="{StaticResource ModernDatePicker}"
+                            materialDesign:HintAssist.Hint="Select check-out date"/>
+            </StackPanel>
 
-        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="OK" Width="80" Margin="5" IsDefault="True" Click="Ok_Click"/>
-            <Button Content="Cancel" Width="80" Margin="5" IsCancel="True"/>
-        </StackPanel>
-    </Grid>
+            <!-- Total Price -->
+            <StackPanel Grid.Row="5" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="CurrencyUsd"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Total Price"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <TextBox x:Name="TotalText"
+                         Style="{StaticResource ModernTextBox}"
+                         materialDesign:HintAssist.Hint="Total amount"
+                         IsReadOnly="True"
+                         Background="#F5F5F5"/>
+            </StackPanel>
+
+            <!-- Status -->
+            <StackPanel Grid.Row="6" Margin="0,0,0,16">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <iconPacks:PackIconMaterialDesign Kind="CheckCircle"
+                                                       Width="18" Height="18"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Status"
+                               Style="{StaticResource ModernLabel}"
+                               Margin="0"/>
+                </StackPanel>
+                <ComboBox x:Name="StatusCombo"
+                          Style="{StaticResource ModernComboBox}"
+                          materialDesign:HintAssist.Hint="Select booking status"/>
+            </StackPanel>
+
+            <!-- Info Card -->
+            <Border Grid.Row="7"
+                    Background="#FFF3E0"
+                    CornerRadius="8"
+                    Padding="12"
+                    Margin="0,8,0,16">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterialDesign Kind="InformationOutline"
+                                                       Width="20" Height="20"
+                                                       Foreground="{StaticResource WarningBrush}"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Total price is calculated automatically based on room rate and number of nights"
+                               FontSize="12"
+                               Foreground="{StaticResource TextSecondaryBrush}"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Action Buttons -->
+            <StackPanel Grid.Row="9"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Margin="0,8,0,0">
+                <Button Content="CANCEL"
+                        Style="{StaticResource DialogButton}"
+                        IsCancel="True"
+                        Margin="0,0,12,0"/>
+                <Button Content="SAVE"
+                        Style="{StaticResource DialogPrimaryButton}"
+                        IsDefault="True"
+                        Click="Ok_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>
 
