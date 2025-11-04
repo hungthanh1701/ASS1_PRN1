@@ -165,7 +165,6 @@
         <Setter Property="Padding" Value="16"/>
         <Setter Property="Margin" Value="8"/>
         <Setter Property="materialDesign:ElevationAssist.Elevation" Value="Dp1"/>
-        <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth1"/>
     </Style>
 
     <!-- Label Style -->
