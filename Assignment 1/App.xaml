@@ -13,8 +13,8 @@
                 <!-- 2. Primary Color Palette: DeepPurple (Màu chính) -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
 
-                <!-- 3. Secondary Color Palette: Cyan (Màu nhấn) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Cyan.xaml" />
+                <!-- 3. Accent Color Palette: LightBlue (Màu nhấn) -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightBlue.xaml" />
 
                 <!-- 4. Default Theme and Color Settings (Light Theme) -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
