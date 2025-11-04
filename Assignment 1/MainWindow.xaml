@@ -45,8 +45,9 @@
 
         <TabControl Grid.Row="1"
                     Margin="16"
-                    Style="{StaticResource MaterialDesignTabControl}"
-                    materialDesign:ColorZoneAssist.Mode="PrimaryMid">
+                    Background="{StaticResource SurfaceBrush}"
+                    BorderThickness="1"
+                    BorderBrush="#E0E0E0">
 
             <TabItem>
                 <TabItem.Header>
