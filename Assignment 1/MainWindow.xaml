@@ -105,7 +105,7 @@
                     <GroupBox Grid.Row="1" Header="Rooms" Style="{StaticResource ModernGroupBox}">
                         <DataGrid ItemsSource="{Binding Rooms}"
                                   SelectedItem="{Binding SelectedRoom}"
-                                  Style="{StaticResource ModernDataGrid}"
+                                  Style="{StaticResource ModernDataGrid}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Room Number" Binding="{Binding RoomNumber}" Width="100"/>
@@ -189,7 +189,7 @@
                     <GroupBox Grid.Row="1" Header="Customers" Style="{StaticResource ModernGroupBox}">
                         <DataGrid ItemsSource="{Binding Customers}"
                                   SelectedItem="{Binding SelectedCustomer}"
-                                  Style="{StaticResource ModernDataGrid}"
+                                  Style="{StaticResource ModernDataGrid}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Name" Binding="{Binding FullName}" Width="200"/>
@@ -286,7 +286,7 @@
                     <GroupBox Grid.Row="1" Header="Bookings" Style="{StaticResource ModernGroupBox}">
                         <DataGrid ItemsSource="{Binding Bookings}"
                                   SelectedItem="{Binding SelectedBooking}"
-                                  Style="{StaticResource ModernDataGrid}"
+                                  Style="{StaticResource ModernDataGrid}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Customer" Binding="{Binding Customer.FullName}" Width="150"/>
@@ -392,7 +392,7 @@
                     <GroupBox Grid.Row="1" Header="Staff Members" Style="{StaticResource ModernGroupBox}">
                         <DataGrid ItemsSource="{Binding StaffMembers}"
                                   SelectedItem="{Binding SelectedStaff}"
-                                  Style="{StaticResource ModernDataGrid}"
+                                  Style="{StaticResource ModernDataGrid}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200"/>
@@ -496,7 +496,7 @@
 
                     <GroupBox Grid.Row="1" Header="Audit Logs" Style="{StaticResource ModernGroupBox}">
                         <DataGrid ItemsSource="{Binding AuditLogs}"
-                                  Style="{StaticResource ModernDataGrid}"
+                                  Style="{StaticResource ModernDataGrid}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                                 <DataGridTextColumn Header="Date" Binding="{Binding OperationDate, StringFormat=dd/MM/yyyy HH:mm}" Width="120"/>
