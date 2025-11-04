@@ -13,55 +13,18 @@
                 <!-- 2. Primary Color Palette: DeepPurple (Màu chính) -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
 
-                <!-- 3. Secondary Color Palette: Indigo (Màu nhấn) -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Secondary/MaterialDesignColor.Indigo.xaml" />
+                <!-- 3. Secondary Color Palette: Cyan (Màu nhấn) -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Cyan.xaml" />
 
-                <!-- 4. Default Theme and Color Settings (Dark or Light) -->
+                <!-- 4. Default Theme and Color Settings (Light Theme) -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
 
+                <!-- 5. Custom Styles (Must be LAST to override defaults) -->
+                <ResourceDictionary Source="Themes/CustomStyles.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
 
-            <!-- Custom Brushes for Status/Alerts (Keep for consistent color logic) -->
-            <SolidColorBrush x:Key="SuccessBrush" Color="#4CAF50" />
-            <!-- Green -->
-            <SolidColorBrush x:Key="InfoBrush" Color="#03A9F4" />
-            <!-- Light Blue -->
-            <SolidColorBrush x:Key="DangerBrush" Color="#F44336" />
-            <!-- Red -->
-
-            <!-- Button Styles - Sử dụng các Style tích hợp của Material Design để có hiệu ứng hiện đại -->
-
-            <!-- Primary Button (Deep Purple) - Button chính cho các hành động quan trọng -->
-            <Style x:Key="PrimaryAction" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
-                <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
-                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
-                <Setter Property="Margin" Value="8" />
-                <Setter Property="Padding" Value="16,8" />
-            </Style>
-
-            <!-- Info Button (Outline) - Button cho các hành động thứ cấp hoặc thông tin -->
-            <Style x:Key="InfoAction" TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
-                <Setter Property="BorderBrush" Value="{StaticResource InfoBrush}" />
-                <Setter Property="Foreground" Value="{StaticResource InfoBrush}" />
-                <Setter Property="Margin" Value="8" />
-                <Setter Property="Padding" Value="16,8" />
-            </Style>
-
-            <!-- Danger Button (Flat) - Button cho các hành động xóa/nguy hiểm -->
-            <Style x:Key="DangerAction" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
-                <Setter Property="Foreground" Value="{StaticResource DangerBrush}" />
-                <Setter Property="Margin" Value="8" />
-                <Setter Property="Padding" Value="16,8" />
-            </Style>
-
-            <!-- Success Button (Raised) - Button cho các hành động xác nhận/hoàn thành -->
-            <Style x:Key="SuccessAction" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedAccentButton}">
-                <Setter Property="Background" Value="{StaticResource SuccessBrush}" />
-                <Setter Property="Foreground" Value="White" />
-                <Setter Property="Margin" Value="8" />
-                <Setter Property="Padding" Value="16,8" />
-            </Style>
 
         </ResourceDictionary>
     </Application.Resources>

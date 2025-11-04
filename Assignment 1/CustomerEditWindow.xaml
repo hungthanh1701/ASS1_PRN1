@@ -1,37 +1,124 @@
 <Window x:Class="Assignment_1.CustomerEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Customer" Height="300" Width="420" WindowStartupLocation="CenterOwner">
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Title="Customer Details"
+        Height="550"
+        Width="550"
+        WindowStartupLocation="CenterOwner"
+        Background="{StaticResource BackgroundBrush}"
+        ResizeMode="NoResize">
 
-        <TextBlock Text="Full Name:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <TextBox x:Name="NameText" Grid.Column="1" Margin="0,0,0,10"/>
+    <Border Padding="24" Background="{StaticResource SurfaceBrush}"
+            Margin="16" CornerRadius="12"
+            materialDesign:ElevationAssist.Elevation="Dp4">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Text="Email:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <TextBox x:Name="EmailText" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,24">
+                <iconPacks:PackIconMaterialDesign Kind="Account"
+                                                   Width="32" Height="32"
+                                                   Foreground="{StaticResource PrimaryColorBrush}"
+                                                   VerticalAlignment="Center"
+                                                   Margin="0,0,12,0"/>
+                <TextBlock Text="Customer Information"
+                           Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                           Foreground="{StaticResource PrimaryColorBrush}"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="2" Text="Phone:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <TextBox x:Name="PhoneText" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Full Name -->
+            <StackPanel Grid.Row="1" Margin="0,0,0,16">
+                <TextBlock Text="Full Name"
+                           Style="{StaticResource ModernLabel}"
+                           Margin="0,0,0,8"/>
+                <TextBox x:Name="NameText"
+                         Style="{StaticResource ModernTextBox}"
+                         materialDesign:HintAssist.Hint="Enter customer full name"/>
+            </StackPanel>
 
-        <TextBlock Grid.Row="3" Text="Address:" Margin="0,0,10,10" VerticalAlignment="Center"/>
-        <TextBox x:Name="AddressText" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10"/>
+            <!-- Email -->
+            <StackPanel Grid.Row="2" Margin="0,0,0,16">
+                <TextBlock Text="Email Address"
+                           Style="{StaticResource ModernLabel}"
+                           Margin="0,0,0,8"/>
+                <TextBox x:Name="EmailText"
+                         Style="{StaticResource ModernTextBox}"
+                         materialDesign:HintAssist.Hint="example@email.com"
+                         materialDesign:HintAssist.HelperText="We'll never share your email"/>
+            </StackPanel>
 
-        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="OK" Width="80" Margin="5" IsDefault="True" Click="Ok_Click"/>
-            <Button Content="Cancel" Width="80" Margin="5" IsCancel="True"/>
-        </StackPanel>
-    </Grid>
+            <!-- Phone -->
+            <StackPanel Grid.Row="3" Margin="0,0,0,16">
+                <TextBlock Text="Phone Number"
+                           Style="{StaticResource ModernLabel}"
+                           Margin="0,0,0,8"/>
+                <TextBox x:Name="PhoneText"
+                         Style="{StaticResource ModernTextBox}"
+                         materialDesign:HintAssist.Hint="Enter phone number"/>
+            </StackPanel>
+
+            <!-- Address -->
+            <StackPanel Grid.Row="4" Margin="0,0,0,16">
+                <TextBlock Text="Address"
+                           Style="{StaticResource ModernLabel}"
+                           Margin="0,0,0,8"/>
+                <TextBox x:Name="AddressText"
+                         Style="{StaticResource ModernTextBox}"
+                         materialDesign:HintAssist.Hint="Enter full address"
+                         Height="72"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+
+            <!-- Info Card -->
+            <Border Grid.Row="5"
+                    Background="#E8EAF6"
+                    CornerRadius="8"
+                    Padding="12"
+                    Margin="0,8,0,16">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterialDesign Kind="InformationOutline"
+                                                       Width="20" Height="20"
+                                                       Foreground="{StaticResource PrimaryColorBrush}"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                    <TextBlock Text="Please ensure all information is accurate before saving"
+                               FontSize="12"
+                               Foreground="{StaticResource TextSecondaryBrush}"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Action Buttons -->
+            <StackPanel Grid.Row="7"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Margin="0,8,0,0">
+                <Button Content="CANCEL"
+                        Style="{StaticResource DialogButton}"
+                        IsCancel="True"
+                        Margin="0,0,12,0"/>
+                <Button Content="SAVE"
+                        Style="{StaticResource DialogPrimaryButton}"
+                        IsDefault="True"
+                        Click="Ok_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>
 
