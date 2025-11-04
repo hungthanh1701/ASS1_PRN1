@@ -78,7 +78,7 @@
             <!-- Check-in Date -->
             <StackPanel Grid.Row="3" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterial Kind="CalendarStart"
+                    <iconPacks:PackIconMaterial Kind="CalendarArrowRight"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>
@@ -94,7 +94,7 @@
             <!-- Check-out Date -->
             <StackPanel Grid.Row="4" Margin="0,0,0,16">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                    <iconPacks:PackIconMaterial Kind="CalendarEnd"
+                    <iconPacks:PackIconMaterial Kind="CalendarArrowLeft"
                                                        Width="18" Height="18"
                                                        VerticalAlignment="Center"
                                                        Margin="0,0,8,0"/>

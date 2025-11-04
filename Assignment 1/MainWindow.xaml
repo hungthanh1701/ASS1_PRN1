@@ -95,7 +95,7 @@
                             <Button Grid.Column="6" Grid.RowSpan="2" Style="{StaticResource InfoButton}" 
                                     Command="{Binding SearchRoomsCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Magnify" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -179,7 +179,7 @@
                             <Button Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
                                     Command="{Binding SearchCustomersCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Magnify" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -276,7 +276,7 @@
                             <Button Grid.Column="6" Grid.RowSpan="2" Style="{StaticResource InfoButton}"
                                     Command="{Binding SearchBookingsCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Magnify" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
@@ -382,7 +382,7 @@
                             <Button Grid.Column="4" Grid.RowSpan="2" Style="{StaticResource InfoButton}" 
                                     Command="{Binding SearchStaffCommand}" VerticalAlignment="Center" Margin="5">
                                 <StackPanel Orientation="Horizontal">
-                                    <iconPacks:PackIconMaterial Kind="Search" Margin="0,0,5,0"/>
+                                    <iconPacks:PackIconMaterial Kind="Magnify" Margin="0,0,5,0"/>
                                     <TextBlock Text="Search"/>
                                 </StackPanel>
                             </Button>
